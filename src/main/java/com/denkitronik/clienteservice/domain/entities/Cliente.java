@@ -36,7 +36,7 @@ public class Cliente {
 
     private String foto;
 
-    @NotNull(message = "La región es obligatoria")
+    // Región opcional: el reto 06 crea clientes sin región (POST nombre/apellido/email)
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "region_id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
